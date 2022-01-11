@@ -11,8 +11,23 @@ module.exports = {
         .sendKeys('#et_pb_contact_message_0', browser.Keys.LEFT)
         .sendKeys('#et_pb_contact_message_0', browser.Keys.ENTER)
         .sendKeys('#et_pb_contact_message_0', browser.Keys.SUBTRACT)
-        .pause(9000)
-    
+        //.mouseButtonClick('right')
+        .pause(3500)
+    },
+
+    'Should perform right click (not working or wrong test implementation': async (browser) => {
+        await browser
+            .moveToElement('#et_pb_contact_message_0', 10, 10)
+            .pause(3000)
+        await browser
+            .perform(async () => {
+                const actions = await this.actions( {async: true} )
+            
+                return actions
+                    //.click('button[name="et_builder_submit_button"]:nth-child(1)')
+                    .contextClick('#et_pb_contact_message_0')
+                    .pause(5000)
+        })
     }
 }
 
