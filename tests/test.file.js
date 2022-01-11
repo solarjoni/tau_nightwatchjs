@@ -13,4 +13,4 @@ module.exports = {
             //.pause(3000)
             .expect.element('#et_pb_contact_form_0').text.to.equal('Thanks for contacting us')
     }
-};
+}

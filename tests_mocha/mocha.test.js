@@ -13,4 +13,22 @@ describe('Filling out a Form using Mocha test runner', () => {
             //.pause(3000)
             .expect.element('#et_pb_contact_form_0').text.to.equal('Thanks for contacting us')
     })
+
+    it.skip('demo test (not working or incorrect test)', function() {
+        //Not working or incorrect test
+        browser
+            .navigateTo('https://nightwatchjs.org')
+            .perform(function() {
+              const actions = this.actions({async: true});
+      
+              return actions
+               .keyDown(Keys.SHIFT)
+               .keyUp(Keys.SHIFT)
+               .move('#navigation ul:nth-child(1) li:nth-child(2)')
+               .click()
+               .pause(3000)
+            });
+    })
+      
+      
 })
