@@ -28,6 +28,18 @@ module.exports = {
                     .contextClick('#et_pb_contact_message_0')
                     .pause(5000)
         })
+    },
+
+    'Should perform window actions': async (browser) => {
+        await browser
+        .openNewWindow('tab')
+        .fullscreenWindow()
+        .windowHandles(async (results) => {
+            const newWindow = await results.value[0]
+            //console.log(results.value);
+            await browser.switchWindow(newWindow)
+        })
+        .pause(3500)
     }
 }
 
