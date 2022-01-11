@@ -40,7 +40,18 @@ module.exports = {
             await browser.switchWindow(newWindow)
         })
         .pause(3500)
+    },
+
+    'Should interact with alerts': async (browser) => {
+        await browser
+        .url('http://demo.automationtesting.in/Alerts.html')
+        .click('#OKTab button')
+        .getAlertText(async (results) => console.log(results.value))
+        .pause(3000)
+        .acceptAlert()
+        .pause(3000)
     }
+
 }
 
 /**
