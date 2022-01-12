@@ -15,7 +15,7 @@ module.exports = {
         .pause(3500)
     },
 
-    'Should perform right click (not working or wrong test implementation': async (browser) => {
+    'Should perform right click (not working or wrong test implementation)': async (browser) => {
         await browser
             .moveToElement('#et_pb_contact_message_0', 10, 10)
             .pause(3000)
