@@ -12,7 +12,7 @@ module.exports = {
 
     'Should assert form field value': async (browser) => {
         await browser
-        .setValue('#et_pb_contact_name_0', 'Chaton baton')
+        .sendKeys('#et_pb_contact_name_0', 'Chaton baton')
         .assert.valueContains('#et_pb_contact_name_0', 'baton')
         //.assert.value('#et_pb_contact_name_0', 'baton') //baton fails but Chaton baton - passes
     },
