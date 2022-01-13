@@ -8,10 +8,9 @@ module.exports = {
     'Should expect specified form field value': async (browser) => {
         await browser
         .setValue('#et_pb_contact_name_0', 'Antoin Deboix')
-        .pause(3000)
-        await browser
         .assert.value('#et_pb_contact_name_0', 'Antoin Deboix') //works
-        //.expect.element('#et_pb_contact_name_0').text.to.contain('Antoin Deboix') //does not working
+        //.assert.valueContains('#et_pb_contact_name_0', 'Deboix') //works
+        //.expect.element('#et_pb_contact_name_0').to.have.attribute('value') //works
     },
 
     'Should expect curent url as specified': async (browser) => {
