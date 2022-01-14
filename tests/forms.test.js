@@ -24,7 +24,6 @@ module.exports = {
 
         FormPage
         .navigate()
-        
         .verify.title('Filling Out Forms | Ultimate QA')
         .enterNameAndMessage('John Doe', 'Lorem Ipsum')
         .submitLeftForm()
