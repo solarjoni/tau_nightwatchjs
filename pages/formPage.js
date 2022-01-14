@@ -10,7 +10,7 @@ const elements = {
     
     bttnSubmit: '#et_pb_contact_form_0 form button',
     //bttnSubmit: '.et_pb_contact_submit',
-    lblLeftFormMessage: '#et_pb_contact_form_0 > div'
+    lblLeftFormMessage: '#et_pb_contact_form_0 > div:nth-child(1)'
 }
 
 const commands = [
@@ -26,6 +26,7 @@ const commands = [
                     .setValue('@leftFormName', name)
                     .setValue('@leftFormMessage', message)
                     .pause(1000)  
+
         },
 
         submitLeftForm() {
