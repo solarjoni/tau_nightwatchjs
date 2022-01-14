@@ -30,6 +30,11 @@ module.exports = {
         .verify.containsText('@lblLeftFormMessage:nth-child(1)', 'Thanks for contacting us') //:nth-child(1) could be in definition also
         
         rightForm.expect.element('@txtName').to.be.visible
+        rightForm
+        .enterName('Sam')
+        .enterMessage('Is a nice guy.')
+        .verify.value('@txtName', 'Sam')
+        .verify.value('@txtMessage', 'Is a nice guy.')
     },
 
     'Should verify error message when left form is filled no fully': async (browser) => {
