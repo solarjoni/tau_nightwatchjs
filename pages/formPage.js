@@ -8,7 +8,7 @@ const elements = {
     
     form: '#et_pb_contact_form_0 form',
     
-    bttnSubmit: `#et_pb_contact_form_0 form button`,
+    bttnSubmit: '#et_pb_contact_form_0 form button',
     //bttnSubmit: '.et_pb_contact_submit',
     lblLeftFormMessage: '#et_pb_contact_form_0 > div'
 }
@@ -53,7 +53,11 @@ module.exports = {
                 {
                     enterName(name) {
                         return this
-                            .setValue('@txtName')
+                            .updateValue('@txtName', name)
+                    },
+                    enterMessage(message) {
+                        return this
+                            .updateValue('@txtMessage', message)
                     }
                 }
             ]
