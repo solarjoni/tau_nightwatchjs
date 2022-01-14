@@ -25,6 +25,8 @@ const commands = [
             return this
                     .setValue('@leftFormName', name)
                     .setValue('@leftFormMessage', message)
+                    .pause(1000)  
+
         },
 
         submitLeftForm() {
