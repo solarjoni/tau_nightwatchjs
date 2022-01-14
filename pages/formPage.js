@@ -25,12 +25,11 @@ const commands = [
             return this
                     .setValue('@leftFormName', name)
                     .setValue('@leftFormMessage', message)
-                    .pause(1000)  
         },
 
         submitLeftForm() {
             browser.pause(1000)
-            return this.click('@bttnSubmit')
+            return this.click('@bttnSubmit').pause(3000)
         }
 
     }
