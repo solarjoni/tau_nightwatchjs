@@ -1,7 +1,7 @@
 const data = require('../globals/data')
 
 describe('Forms Suite', () => {
-    data.forEach(({testCase, name, message, expected}) => {
+    data.forEach(({testCase, name, message, screenFileName, expected}) => {
         it(testCase, (browser) => {
             const FormPage = browser.page.formPage()
 
@@ -11,6 +11,7 @@ describe('Forms Suite', () => {
                 .enterNameAndMessage(name, message)
                 .submitForm('@form')
                 .verify.containsText('@lblLeftFormMessage', expected)
+                .saveScreenshot(screenFileName)
         })       
 
     })
