@@ -30,7 +30,7 @@ const commands = [
 
         submitLeftForm() {
             browser.pause(1000)
-            return this.click('@bttnSubmit')
+            return this.click('@bttnSubmit').pause(3000)
         }
 
     }
