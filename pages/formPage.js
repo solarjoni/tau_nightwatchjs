@@ -24,7 +24,8 @@ const commands = [
         enterNameAndMessage(name, message) { 
             return this
                     .setValue('@leftFormName', name)
-                    .setValue('@leftFormMessage', message)  
+                    .setValue('@leftFormMessage', message)
+                    .pause(1000)  
         },
 
         submitLeftForm() {
