@@ -17,6 +17,7 @@ const commands = [
     {
         /**
          * Enters the given name and message into the form fields
+         * 
          * @param {String} name 
          * @param {String} message 
          * @returns 

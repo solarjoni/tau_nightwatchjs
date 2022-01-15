@@ -19,7 +19,7 @@ module.exports = {
     }, */
 
     'Should successfully fill out the left form using Page Object': (browser) => {
-        const FormPage = browser.page.formPage()
+        const FormPage = browser.page.FormPage()
         const rightForm = FormPage.section.rightForm
 
         FormPage
