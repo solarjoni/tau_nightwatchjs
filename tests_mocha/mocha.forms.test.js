@@ -1,6 +1,6 @@
 describe('Forms Suite', () => {
     it('Should fill out form successfully', (browser) => {
-        const FormPage = browser.page.formPage()
+        const FormPage = browser.page.FormPage()
 
         FormPage
             .navigate()

@@ -3,7 +3,7 @@ const data = require('../globals/data')
 describe('Forms Suite', () => {
     data.forEach(({testCase, name, message, screenFileName, expected}) => {
         it(testCase, (browser) => {
-            const FormPage = browser.page.formPage()
+            const FormPage = browser.page.FormPage()
 
             FormPage
                 .navigate()
