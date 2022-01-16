@@ -26,8 +26,8 @@ module.exports = {
   custom_assertions_path: '',
 
   // See https://nightwatchjs.org/guide/#external-globals
-  globals_path: '',
-  //globals_path : 'globals/globalModule',
+  //globals_path: '',
+  globals_path : 'globals/globalModule',
   webdriver: {},
 
   test_settings: {
